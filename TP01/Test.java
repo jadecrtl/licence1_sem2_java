@@ -7,7 +7,6 @@ public class Test {
         System.out.println("Test Termine");
         Fruit.afficher(f);
         Fruit.afficher(Fruit.hybridation(f,g));
-        Fruit.hybridation(f,g);
     }  
     
 }

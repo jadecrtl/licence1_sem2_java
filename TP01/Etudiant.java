@@ -35,25 +35,26 @@ public class Etudiant {
         }
     }
 
-    public static void mention (Etudiant etu) {
+    public static String mention (Etudiant etu) {
         if (etu.note < 0 || etu.note > 20) {
-            System.out.println ("Note invalide");
+            return ("Note invalide");
         } else {
             if (etu.note >= 0 && etu.note < 10) {
-                System.out.println ("Ajournée");
+                return ("Ajourné");
             }
             if (etu.note >= 10 && etu.note < 12) {
-                System.out.println ("Passable");
+                return ("Passable");
             }
             if (etu.note >= 12 && etu.note < 14) {
-                System.out.println ("Assez bien");
+                return ("Assez bien");
             }
             if (etu.note >= 14 && etu.note < 16) {
-                System.out.println ("Bien");
+                return ("Bien");
             }
             if (etu.note >= 16 && etu.note <= 20) {
-                System.out.println ("Très bien");
+                return ("Très bien");
             }
+            return ("Mention inconnue");
         }
 
     }

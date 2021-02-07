@@ -8,7 +8,7 @@ public class Fruit {
     }
 
     public static void afficher (Fruit f) {
-        System.out.println("Ce fruit est un(e) "+ f.nom +" et pèse "+f.poids+" grammes.");
+        System.out.println("Ce fruit est un(e) "+ f.nom +" et pèse "+ f.poids +" grammes.");
     } 
 
     public static Fruit hybridation (Fruit f1, Fruit f2) {

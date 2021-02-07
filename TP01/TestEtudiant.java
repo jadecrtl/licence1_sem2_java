@@ -8,17 +8,49 @@ public class TestEtudiant {
         Etudiant f = new Etudiant ("Cortial", "Jade", 22007014, 14);
         Etudiant g = new Etudiant ("Cortial", "Jade", 22007013, 1);
         Etudiant h = new Etudiant ("Cortial", "Jade", 22007014, 10);
+        
         Etudiant.afficher(a);
-        System.out.println(Etudiant.estAdmis(a));
-        System.out.println(Etudiant.estAdmis(b));
-        Etudiant.mention(a);
-        Etudiant.mention(b);
-        Etudiant.mention(c);
-        Etudiant.mention(d);
-        Etudiant.mention(e);
-        Etudiant.mention(f);
-        Etudiant.mention(g);
-        Etudiant.mention(h);
+
+        testAdmis(a, false);
+        testAdmis(b, false);
+        testAdmis(c, true);
+        testAdmis(d, true);
+        testAdmis(e, true);
+        testAdmis(f, true);
+        testAdmis(g, false);
+        testAdmis(h, true);
+
+        testMention(a, "Note invalide");
+        testMention(b, "Ajourné");
+        testMention(c, "");
+        testMention(d, "Bien");
+        testMention(e, "Très bien");
+        testMention(f, "");
+        testMention(g, "Ajourné");
+        testMention(h, "Passable");
+
+
+    }
+    public static boolean testAdmis(Etudiant etu, boolean resultatAttendu) {
+        if (Etudiant.estAdmis(etu) == resultatAttendu ){
+            System.out.println("Test OK");
+            return true;
+        }
+        else {
+            System.out.println("!!!!!!! Test KO : estAdmis = " + etu.note + " ne correspond pas au test envoyé (" + resultatAttendu + ").");
+            Etudiant.afficher(etu);
+            return false;
+        }
     }
 
+    public static boolean testMention(Etudiant etu, String resultatAttendu) {
+        if (Etudiant.mention(etu) == resultatAttendu) {
+            System.out.println("Test OK");
+            return true;
+        } else {
+            System.out.println("!!!!!!! Test KO : mention = " + Etudiant.mention(etu) + " ne correspond pas au test envoyé ("+ resultatAttendu + ").");
+            Etudiant.afficher(etu);
+            return false;
+        }
+    }
 }

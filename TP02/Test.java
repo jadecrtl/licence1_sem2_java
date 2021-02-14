@@ -6,6 +6,7 @@ public class Test {
         Etudiant e1 = new Etudiant ("Luke", "Skywalker", 8.25);
         Etudiant e2 = new Etudiant ("Leia", "Organa", 11.75);
         Etudiant e3 = new Etudiant ("Jade", "Cortial", 18);
+        Etudiant e4 = new Etudiant ("R2", "D2", 7);
         System.out.println("nb d'etudiants: "+Etudiant.getNombreEtudiants);
             //nb d'etudiants: 3
         System.out.println("Somme des notes: "+Etudiant.sommeDesNotes);
@@ -29,6 +30,12 @@ public class Test {
 
         Trio trio1 = new Trio (e1, e2, e3);
         trio1.premier().afficher();
+        System.out.println("Voici la moyenne du trio: "+trio1.moyenne());
+        System.out.println(trio1.classement("Luke", "Skywalker"));
+        System.out.println(trio1.classement("Leia", "Organa"));
+        System.out.println(trio1.classement("Jade", "Cortial"));
+        System.out.println(trio1.classement("Fabien", "Cortial"));
+        System.out.println(trio1.meilleurQueLaMoyenne());//doit renvoyer true
 
     }
 }

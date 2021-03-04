@@ -2,6 +2,7 @@ public class Utilisateur {
     private String pseudo;
     private String motDePasse;
     private final String adresseMail;
+    
     public Utilisateur (String pseudo, String motDePasse, String adresseMail) {
         this.pseudo = pseudo;
         this.motDePasse = motDePasse;
@@ -15,7 +16,7 @@ public class Utilisateur {
     }
 
     public String changerMotDePasse (String motDePasse, String nouveauMotDePasse) {
-        if (testMotDePasse(motDePasse)){
+        if (this.testMotDePasse(motDePasse)){
             this.motDePasse = nouveauMotDePasse;
         }
         return nouveauMotDePasse;

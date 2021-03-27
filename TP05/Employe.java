@@ -20,7 +20,7 @@ public class Employe {
     }
 
     public String affiche() {
-        return this.nom + "gagne: " + this.salaire;
+        return this.nom + " gagne: " + this.salaire + " ;";
     }
 
 

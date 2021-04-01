@@ -1,39 +1,48 @@
+
 public class Cellule {
-    private Cellule precedente;
-    private Cellule suivante;
-    private boolean noire;
-    private boolean prochainEtat;
-
-    public Cellule getPrecedente() {
-        return this.precedente;
-    }
-    public void setPrecedente (Cellule precedente) {
-        this.precedente = precedente;
-    }
-    public Cellule getSuivante() {
-        return this.suivante;
-    }
-    public void setSuivante (Cellule suivante) {
-        this.suivante = suivante;
-    }
-    public boolean getProchaineEtat() {
-        return this.prochainEtat;
-    }
-    public void setProchainEtat (boolean noire) {
-        this.prochainEtat = noire;
-    }
-    public boolean getNoire() {
-        return this.noire;
-    }
-    public void setNoire (boolean noire) {
-        this.noire = noire;
-    }
-
-    public Cellule (boolean noire) {
-        this.precedente = null;
-        this.suivante = null;
-        this.noire = noire;
-    }
+	private boolean noire ;
+	private Cellule suivante ;
+	private Cellule precedente ;
+	private boolean prochainEtat ;
+	
+	public Cellule getSuivante() {
+		return this.suivante;
+	}
+	
+	public Cellule getPrecedente() {
+		return this.precedente;
+	}
+	
+	public boolean getNoire() {
+		return this.noire;
+	}
+	
+	public boolean getProchainEtat() {
+		return this.prochainEtat;
+	}
+	
+	public void setNoire(boolean noire) {
+		this.noire = noire;
+	}
+	
+	public void setProchainEtat(boolean noire) {
+		this.prochainEtat = noire ;
+	}
+	
+	public void setSuivante(Cellule suivante) {
+		this.suivante = suivante;
+	}
+	
+	public void setPrecedente(Cellule precedente) {
+		this.precedente = precedente ;
+	}
+	
+	public Cellule(boolean noire) {
+		this.noire = noire;
+		this.suivante = null;
+		this.precedente = null;
+		this.prochainEtat = false ;
+	}
 	
 	public void afficher() {
 		if(this.noire == true) {
@@ -94,6 +103,5 @@ public class Cellule {
 			this.noire = this.prochainEtat ;
 		}
 	}
-
-
+	
 }

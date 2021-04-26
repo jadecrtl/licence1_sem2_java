@@ -71,7 +71,7 @@ public class TableRonde {
             System.out.println("J'ai rien à dire.");
             return;
         }
-        this.courant.eloquence();
+        this.courant.eloquence(this);
     }
 
 }

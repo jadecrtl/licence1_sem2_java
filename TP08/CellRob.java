@@ -64,11 +64,11 @@ public class CellRob {
         return false;
     }
 
-    public void eloquence() {
+    public void eloquence(TableRonde tab) {
         CellRob tmp = this;
-        while (tmp != null) {
+        while (tab.getCourant() != null) {
             if (tmp.rob.finiDeParler()) {
-                tmp.supprimer(tmp.rob.getId());
+                tab.supprimer(tmp.rob.getId());
             }else {
                 tmp.rob.parle(5);
             }

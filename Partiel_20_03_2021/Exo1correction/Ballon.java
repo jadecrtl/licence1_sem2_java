@@ -6,30 +6,6 @@ public class Ballon {
     private boolean noeudFait;
     private boolean eclate;
 
-    public boolean isEclate() {
-        return eclate;
-    }
-
-    public void setEclate(boolean eclate) {
-        this.eclate = eclate;
-    }
-
-    public boolean isNoeudFait() {
-        return noeudFait;
-    }
-
-    public void setNoeudFait(boolean noeudFait) {
-        this.noeudFait = noeudFait;
-    }
-
-    public int getPression() {
-        return pression;
-    }
-
-    public void setPression(int pression) {
-        this.pression = pression;
-    }
-
     public Ballon (String c) {
         this.couleur = c;
         pression = 0;
@@ -48,10 +24,10 @@ public class Ballon {
     }
 
     public void souffler() {
-        if(this.inutilisable()) {
-            return;
+        if(this.inutilisable()){
+            return; 
         }
-        else {
+        else{
             pression++;
         }
         if(this.pression > Ballon.pressionMax) {
@@ -59,8 +35,8 @@ public class Ballon {
         }
     }
 
-    public void degonfler() {
-        if(this.inutilisable() || pression == 0) {
+    public void degonfler() {//ne s'applique qu'à des ballons en bon état et non noués
+        if(this.inutilisable() || pression == 0) {//de plus la pression ne peut diminuer que si elle est positive
             return;
         }
         else {
@@ -76,7 +52,7 @@ public class Ballon {
 
     public void eclater() {
         this.eclate = true;
-        pression = 0;
+        pression = 0;//il faut penser à dégonfler le ballon crevé
     }
 
 

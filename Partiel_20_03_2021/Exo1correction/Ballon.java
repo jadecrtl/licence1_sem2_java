@@ -44,8 +44,7 @@ public class Ballon {
         }
     }
 
-    /* On peut décider de laisser l'utilisateur faire un noeud, que le ballon soit éclaté ou non, qu'il y ait déjà un noeud ou pas et on ne fait pas plusieurs noeud, s'il y avait déjà un noeud, cette opération ne change rien 
-    */
+    //On peut décider de laisser l'utilisateur faire un noeud, que le ballon soit éclaté ou non, qu'il y ait déjà un noeud ou pas et on ne fait pas plusieurs noeud, //s'il y avait déjà un noeud, cette opération ne change rien 
     public void faireNoeud() {
         this.noeudFait = true;
     }
